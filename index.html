@@ -1,70 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>pedalhard cycling club</title>
+    <title>PEDALHARD // CYCLING CLUB — Орёл</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Arcade / retro fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-	<header>
-		<h2></h2>
-		<nav>
-			<li><a href="#">Анонсы</a></li>
-			<li><a href="#">Встречи</a></li>
-			<li><a href="#">Трейлы</a></li>
-			<li><a href="#">О клубе</a></li>
-			<li><a href="#">Контакты</a></li>
-		</nav>
-	</header>
+    <!-- VHS overlay: scanlines + noise + glitch flicker -->
+    <div class="vhs-overlay" aria-hidden="true"></div>
+    <div class="vhs-noise" aria-hidden="true"></div>
 
+    <header class="site-header">
+        <a class="logo" href="#hero">
+            <span class="logo-mask">&#9760;</span>
+            <span class="logo-text" data-text="PEDALHARD">PEDALHARD</span>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#season" class="nav-link" data-text="АНОНСЫ">АНОНСЫ</a></li>
+                <li><a href="#meetups" class="nav-link" data-text="ВСТРЕЧИ">ВСТРЕЧИ</a></li>
+                <li><a href="#season" class="nav-link" data-text="ТРЕЙЛЫ">ТРЕЙЛЫ</a></li>
+                <li><a href="#about" class="nav-link" data-text="О КЛУБЕ">О КЛУБЕ</a></li>
+                <li><a href="#contacts" class="nav-link" data-text="КОНТАКТЫ">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<section class="hero">
-		<div class="background-image" style="background-image: url(assets/img/hero.jpg);"></div>
-		<h1>pedalhard.ru</h1>
-		<h3>cycling club</h3>
-		<a href="https://www.strava.com/clubs/pedalhard" class="btn">Вступить в клуб</a>
-	</section>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" style="background-image:url(processed/hero-bg.jpg);"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
 
+        <p class="hero-insert">▶ INSERT COIN · ORЁL CITY · RUSSIA ◀</p>
+        <h1 class="glitch hero-title" data-text="PEDALHARD.RU">PEDALHARD.RU</h1>
+        <h3 class="hero-sub">▓▒░ CYCLING CLUB ░▒▓</h3>
 
-	<section class="our-work">
-		<h3 class="title">Сезон 2021</h3>
-		<p>Совместные тренировки на специализированных MTB трассах и наиболее подходящих грунтовых и шоссейных маршрутах города Орла.
-Информация о подготовке и участие Орловских спортсменов в различных соревнованиях.
+        <div class="hero-hud" aria-hidden="true">
+            <span class="hud-item hud-pink">HP ██████████ 100%</span>
+            <span class="hud-item hud-cyan">SPEED MAX</span>
+            <span class="hud-item hud-green">COMBO x∞</span>
+        </div>
 
-		<ul class="grid">
-			<li class="small" style="background-image: url(assets/img/2.jpg);"></li>
-			<li class="large" style="background-image: url(assets/img/4.jpg);"></li>
-			<li class="large" style="background-image: url(assets/img/1.jpg);"></li>
-			<li class="small" style="background-image: url(assets/img/6.jpg);"></li>
-		</div>
-	</section>
-	
-	<section class="features">
-		<h3 class="title">Информация о сборах</h3>
-		<p>На совместные тренировки, шлем обязателен! Если опаздываете, то звоните заранее! </p>
-	 Узнать о месте сбора тут <a href="https://vk.com/pedalhard"  class="btn"> Группа вконтакте  </a>
-	</section>
+        <a href="https://www.strava.com/clubs/pedalhard" target="_blank" rel="noopener" class="btn btn-pink">
+            [ ВСТУПИТЬ В КЛУБ ]
+        </a>
 
-	<footer>
-		<ul>
-			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-github-square""></i></a></li>
-		</ul>
- 
-	</footer>
+        <div class="scroll-hint" aria-hidden="true">▼ SCROLL ▼</div>
+    </section>
+
+    <!-- ================= SEASON / OUR WORK ================= -->
+    <section class="our-work" id="season">
+        <h3 class="title neon-pink" data-text="СЕЗОН 2021">СЕЗОН 2021</h3>
+        <hr class="rule rule-pink">
+        <p class="section-text">
+            Совместные тренировки на специализированных MTB трассах и наиболее
+            подходящих грунтовых и шоссейных маршрутах города Орла.
+            Информация о подготовке и участие орловских спортсменов
+            в различных соревнованиях.
+        </p>
+
+        <ul class="grid gallery">
+            <li class="small card">
+                <img src="processed/2.jpg" alt="Тренировка на трейле" loading="lazy">
+                <span class="card-tag">STAGE 01</span>
+            </li>
+            <li class="large card">
+                <img src="processed/4.jpg" alt="Гонка" loading="lazy">
+                <span class="card-tag">STAGE 02</span>
+            </li>
+            <li class="large card">
+                <img src="processed/1.jpg" alt="Марафон" loading="lazy">
+                <span class="card-tag">STAGE 03</span>
+            </li>
+            <li class="small card">
+                <img src="processed/6.jpg" alt="Вечерний заезд" loading="lazy">
+                <span class="card-tag">STAGE 04</span>
+            </li>
+            <li class="small card">
+                <img src="processed/3.jpg" alt="Спуск" loading="lazy">
+                <span class="card-tag">STAGE 05</span>
+            </li>
+            <li class="large card">
+                <img src="processed/5.jpg" alt="Дорога домой" loading="lazy">
+                <span class="card-tag">BOSS LEVEL</span>
+            </li>
+            <li class="large card">
+                <img src="processed/7.jpg" alt="Команда клуба" loading="lazy">
+                <span class="card-tag">PARTY</span>
+            </li>
+            <li class="small card">
+                <img src="processed/2.jpg" alt="Финиш" loading="lazy">
+                <span class="card-tag">FINISH</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ================= FEATURES / MEETUPS ================= -->
+    <section class="features" id="meetups">
+        <h3 class="title neon-cyan" data-text="ИНФОРМАЦИЯ О СБОРАХ">ИНФОРМАЦИЯ О СБОРАХ</h3>
+        <hr class="rule rule-cyan">
+
+        <ul class="grid feature-cards">
+            <li class="card panel panel-cyan">
+                <i class="fa-solid fa-helmet-safety icon-cyan"></i>
+                <h4>ШЛЕМ ОБЯЗАТЕЛЕН</h4>
+                <p>На совместные тренировки — шлем обязателен. Без экипировки в пати не берём.</p>
+            </li>
+            <li class="card panel panel-pink">
+                <i class="fa-solid fa-phone-volume icon-pink"></i>
+                <h4>ОПАЗДЫВАЕШЬ — ЗВОНИ</h4>
+                <p>Если опаздываете, то звоните заранее! Мы не ждём — мы стартуем по таймеру.</p>
+            </li>
+            <li class="card panel panel-green">
+                <i class="fa-solid fa-location-dot icon-green"></i>
+                <h4>ТОЧКА СБОРА</h4>
+                <p>Узнать о месте сбора можно в нашей группе ВКонтакте. Следи за анонсами.</p>
+            </li>
+        </ul>
+
+        <a href="https://vk.com/pedalhard" target="_blank" rel="noopener" class="btn btn-cyan">
+            [ ГРУППА ВКОНТАКТЕ ]
+        </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+        <h3 class="title neon-pink" data-text="PRESS START">PRESS START</h3>
+        <hr class="rule rule-pink">
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>RIDE FAST ✦ DREAM BRIGHT ✦ NO PAIN NO GAIN ✦ ПЕДАЛЬ ИЛИ СМЕРТЬ ✦ ORЁL 2021 ✦&nbsp;</span>
+                <span>RIDE FAST ✦ DREAM BRIGHT ✦ NO PAIN NO GAIN ✦ ПЕДАЛЬ ИЛИ СМЕРТЬ ✦ ORЁL 2021 ✦&nbsp;</span>
+            </div>
+        </div>
+        <p class="section-text about-text">
+            PEDALHARD — велоклуб из города Орла. Асфальт, грунт, трейлы и адреналин.
+            надевай маску, залезай в седло и догоняй группу, пока не село солнце.
+        </p>
+    </section>
+
+    <!-- ================= FOOTER / CONTACTS ================= -->
+    <footer id="contacts">
+        <ul class="socials">
+            <li><a href="https://vk.com/pedalhard" target="_blank" rel="noopener" title="VKontakte"><i class="fa-brands fa-vk"></i></a></li>
+            <li><a href="https://www.strava.com/clubs/pedalhard" target="_blank" rel="noopener" title="Strava"><i class="fa-brands fa-strava"></i></a></li>
+            <li><a href="https://t.me/pedalhard" target="_blank" rel="noopener" title="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+            <li><a href="https://www.instagram.com/pedalhard_russia" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+        <p class="footer-copy">© 2021 <a href="#hero">PEDALHARD.RU</a> — GAME OVER? CONTINUE…</p>
+        <p class="footer-credit">▮▮ PAUSE · STAY NEON ▮▮</p>
+    </footer>
 
 </body>
-
 </html>
